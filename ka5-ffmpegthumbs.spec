@@ -1,15 +1,15 @@
-%define		kdeappsver	20.12.3
+%define		kdeappsver	21.04.0
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		ffmpegthumbs
 Summary:	Ffmpegthumbs
 Name:		ka5-%{kaname}
-Version:	20.12.3
+Version:	21.04.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	8d2ee30305f5837914c10a0ee2fbaebf
+# Source0-md5:	3675c0c0544b04ff33867ac09da07a80
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 2.8.12
@@ -58,3 +58,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/kservices5/ffmpegthumbs.desktop
 %{_datadir}/config.kcfg/ffmpegthumbnailersettings5.kcfg
 %{_datadir}/metainfo/org.kde.ffmpegthumbs.metainfo.xml
+%{_datadir}/qlogging-categories5/ffmpegthumbs.categories

@@ -30,6 +30,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 FFmpeg based thumbnail generator for video files.
 
+%description -l pl.UTF-8
+Oparty na FFmpeg generator miniaturek plików wideo.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 

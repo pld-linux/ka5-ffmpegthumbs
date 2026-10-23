@@ -8,11 +8,12 @@
 Summary:	Ffmpegthumbs
 Name:		ka5-%{kaname}
 Version:	23.08.5
-Release:	3
+Release:	4
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	a24d81c3652690a7b9f5982570416ddf
+Patch0:		ffmpeg9.patch
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Core-devel >= %{qtver}
 BuildRequires:	cmake >= 3.20
@@ -38,6 +39,7 @@ Oparty na FFmpeg generator miniaturek plików wideo.
 
 %prep
 %setup -q -n %{kaname}-%{version}
+%patch -P0 -p1
 
 %build
 %cmake \
